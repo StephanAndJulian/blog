@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% load post_extras %}
+    {% if blogposts %}
+        {%for blogpost in blogposts%}
+            <div class = "blogpost">
+                <div class = "header">
+                    <table><tr>
+                        <td><a href = '/blogpost/detail/id={{blogpost.pk}}'><h2 class = "title">{{blogpost.title}}</h2></a></td>
+                        <td><ul class = "editlist">
+                            <li><a href = "/blogpost/edit/id={{blogpost.pk}}">Edit</a></li>
+                            <li><a href = "/blogpost/delete/id={{blogpost.pk}}">Delete</a></li>
+                        </ul></td>
+                    </tr></table>
+                </div>
+
+                <p class = "content">{{blogpost.content}}</p>
+                <table class = "footer">
+                    <tr><td class = 'author'>Author: {{blogpost.author}}</td>
+                    <td class = 'publication_date'>{{blogpost.publication_date}}</td>
+                    <td class = 'likes'>{{blogpost|likes}} Like{{blogpost|likes|pluralize}}
+                                        <img src = '{{ STATIC_URL }}img/like.jpg' alt = 'I LIKE' onclick=''> </td> </tr>
+                </table>
+            </div>
+        {%endfor%}
+    {% else %}
+        <h2>Es sind auf dieser Seite leider keine Blogposts vorhanden :(</h2>
+    {% endif %}
+
+{% endblock %}

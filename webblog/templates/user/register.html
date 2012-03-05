@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+        <form action = '' method = 'post'>
+            <div class = 'form_table_container'>
+                <table class = 'form_table'>
+                    <tr>
+                        <td>{{form.username.label}}:</td>
+                        <td>{{form.username}}</td>
+                        <td>{{form.username.errors}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{form.password1.label}}:</td>
+                        <td>{{form.password1}}</td>
+                        <td>{{form.password1.errors}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{form.password2.label}}:</td>
+                        <td>{{form.password2}}</td>
+                        <td>{{form.password2.errors}}</td>
+                    </tr>
+                    <tr>
+                        <td></td><td class = 'confirm_button_td'><input type = 'submit' value = 'Create User'></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+{% endblock %}

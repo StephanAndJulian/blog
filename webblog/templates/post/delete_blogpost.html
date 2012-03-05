@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+        <p>Wollen sie ihren Blogpost '{{blogpost.title}}' wirklich loeschen?</p>
+        <form action ='' method = 'post'>
+            <input type='submit' value='Loeschen' name = 'delete_confirm'>
+            <input type='submit' value='Zurueck' name = 'back'>
+        </form>
+
+{% endblock %}

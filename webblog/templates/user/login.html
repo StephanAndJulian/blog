@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        {% if errors %}
+            <ul>
+                {% for error in errors %}
+                    <li>{{error}}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <form action = '' method = 'post'>
+            <div class = 'form_table_container'>
+                <table class = 'form_table'>
+                <tr>
+                    <td>{{form.user_name.label}}:</td>
+                    <td>{{form.user_name}}</td>
+                    <td>{{form.user_name.errors}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.user_password.label}}:</td>
+                    <td>{{form.user_password}}</td>
+                    <td>{{form.user_password.errors}}</td>
+                </tr>
+                <tr>
+                    <td></td><td><input type = 'submit' value = 'Login' class='btn-primary'></td>
+                </tr>
+                </table>
+            </div>
+        </form>
+{% endblock %}
