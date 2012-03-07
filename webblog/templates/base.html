@@ -42,6 +42,11 @@
             width: 100%;
         }
 
+        .blogpost .editlist {
+            text-align: right;
+            margin-right: 0.5em;
+        }
+
         .blogpost .editlist li {
             margin: 0;
             padding: 0;
@@ -137,9 +142,26 @@
             background-color: lightgray;
         }
 
+        #id_post_content {
+            height: 25em;
+            width: 45em;
+        }
+
+
     </style>
     <link href="{{ STATIC_URL }}bootstrap.css" rel="stylesheet"/>
     <link href="{{ STATIC_URL }}bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        .table-condensed td {
+            text-align: center;
+        }
+
+        .table-condensed  {
+            width: auto;
+            height: auto;
+            margin: auto;
+        }
+    </style>
     <!--<script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/bootstrap.min.js"></script>//-->
 

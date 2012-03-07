@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
     {% block content %}
-            <form action = '' method = 'post'>
-                {{form.as_p}}
-                <input type='submit' value='Erstellen'>
+            <form class = 'form-inline' action = '' method = 'post'>
+                <table class = 'table table-condensed table-bordered'>
+                <tr><td>{{form.post_title.label}}</td><td>{{form.post_title}}</td></tr>
+                <tr><td></td><td>{{form.post_content}}</td></tr>
+                <tr><td>{{form.post_tags.label}}</td><td>{{form.post_tags}}</td></tr>
+                </table>
+                <input class = 'btn-primary' type='submit' value='Erstellen' style='margin-top: 0.3em'>
             </form>
     {% endblock %}
